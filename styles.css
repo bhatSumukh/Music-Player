@@ -188,7 +188,7 @@ footer {
   cursor: pointer;
 }
 
-@media (max-width:412px){
+@media (max-width:480px){
   .current-song{
     display: none;
   }
