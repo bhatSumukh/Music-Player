@@ -1,0 +1,227 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+
+header {
+  background-color: #1e6236;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+
+.music-player-container {
+ display: flex;
+  width: 100%;
+  min-height: 70vh;
+  padding-bottom: 20px;
+}
+
+
+
+.playlist {
+  flex: 0.8;
+  background-color: #181818;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  gap: 20px;
+  border-right: 1px solid #2c2c2c;
+}
+
+
+.playlist button {
+  width: 90px;
+  height: 90px;
+  border: none;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+.playlist button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(29, 185, 84, 0.4);
+}
+
+
+#playlist1 {
+  background-image: url("assets/thumbnail/halloween-thumbnail.png");
+}
+
+#playlist2 {
+  background-image: url("assets/thumbnail/motivational-thumbnail.png");
+}
+
+#playlist3 {
+  background-image: url("assets/thumbnail/phonk-thumbnail.png");
+}
+
+
+.song-list {
+  flex: 2;
+  background-color: #101010;
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 1px solid #2c2c2c;
+  gap: 10px;
+  padding: 8px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.song-list img{
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.song-list li:hover{
+  background-color: rgba(255,255,255,0.1);
+}
+
+
+.current-song {
+  flex: 1.2;
+  background-color: #181818;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.player-controls {
+  background-color: #000;
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid #2c2c2c;
+  background-color: #181818;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+}
+
+
+footer {
+  background-color: #1a1a1a;
+  text-align:left;
+  padding: 10px;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+#current-thumbnail{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: spin 10s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#current-title{
+  text-align: center;
+}
+
+.player-controls {
+  width: 100%;
+  background-color: #181818;
+  padding: 15px;
+  padding-bottom: 120px;
+  text-align: center;
+  border-top: 1px solid #2c2c2c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+}
+.player-controls button {
+  padding-top: 5%;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.player-controls button:hover {
+  transform: scale(1.2);
+  color: #1db954;
+}
+
+#progress-bar {
+  width: 40%;
+  height: 5px;
+  cursor: pointer;
+}
+
+@media (max-width:412px){
+  .current-song{
+    display: none;
+  }
+  .playlist{
+    width: 50px;
+  }
+  header{
+       padding: 15px 20px;
+        padding: 15px 20px;
+        text-align: center;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        font-weight: 500;
+  }
+ .music-player-container{
+  margin-bottom: 0;
+  padding-bottom: 0;
+ }
+ .player-controls{
+  padding-top: 0;
+  padding-bottom: 0;
+ }
+
+}
+
+footer {
+  background-color: #121212;
+  color: #fff;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+}
+
+footer .copyright p {
+  margin: 4px 0;
+  color: #bbb;
+}
